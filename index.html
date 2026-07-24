@@ -48,37 +48,35 @@
     }
     .hero-stat span { font-size: 0.88rem; color: var(--muted); }
     .hero-quote {
-      flex: 0 0 220px;
+      flex: 0 0 min(440px, 48%);
       position: relative;
-      align-self: flex-start;
-      margin-top: 0.6rem;
+      align-self: stretch;
+      margin-top: 0.4rem;
+      max-width: 440px;
+      width: 100%;
     }
     .quote-card {
       background: var(--cream);
       border-radius: 24px;
       overflow: hidden;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       box-shadow: 0 30px 80px rgba(15, 121, 114, 0.14);
       border: 1px solid rgba(15, 121, 114, 0.08);
       width: 100%;
-      max-width: 260px;
-      padding: 0.8rem;
+      max-width: 100%;
+      min-height: 420px;
+      padding: 0.5rem;
     }
     .hero-photo {
       width: 100%;
-      height: auto;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
       display: block;
-    }
-    .hero-quote::after {
-      content: '';
-      position: absolute;
-      width: 140px; height: 140px;
-      background: var(--rose);
-      border-radius: 50%;
-      bottom: -30px; right: -30px;
-      z-index: -1;
-      opacity: 0.4;
+      border: 6px solid var(--rose);
+      border-radius: 20px;
+      box-sizing: border-box;
     }
 
     /* ─── HOME PREVIEW SECTIONS ─── */
